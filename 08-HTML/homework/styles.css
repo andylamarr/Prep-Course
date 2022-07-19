@@ -1,12 +1,51 @@
+body {
+    /* background-image: url("Fonda.jpeg");
+    background-size: cover;
+    align-items: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    border-style: dashed;
+    border-color: black;
+    border-width: 2px;
+   
+
+    /* background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; */
+
+}
 h1 {
+    display: block;
     color: blueviolet;
+    border-style: dashed;
+    border-color: black;
+    border-width: 2px;
 }
 
 img {
     width: 400px;
+    border-style: dashed;
+    border-color: black;
+    border-width: 2px;
+    
+}
+
+#divClass {
+    display: block;
+    border-style: dashed;
+    border-color: black;
+    border-width: 2px;
+    
 }
 
 #thirdDiv {
+    display: block;
+    position: relative;
     height: 600px;
     width: 500px;
     background-color: yellow;
@@ -21,9 +60,7 @@ img {
 #spanId {
     font-size: 18px;
     margin: 50px;
-}
-
-.divClass {
-  
-
+    border-style: dashed;
+    border-color: black;
+    border-width: 2px;
 }
