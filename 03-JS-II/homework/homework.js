@@ -118,26 +118,26 @@ function operadoresLogicos(num1, num2, num3) { //DUDA3
   return false; 
 }
 
-function esPrimo(numero) { //DUDA4
+function esPrimo(numero) { //DUDA4 NEMESIS
   // Devuelve "true" si "numero" es primo
   // De lo contrario devuelve "falso"
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   
-  // if (numero === 0 || numero === 1 ) return false;
+  if (numero === 0 || numero === 1 ) return false;
+  for (var i = 2; i < numero; i++) {
+    if (numero % i === 0) return false;
+  }
+  return true;
   
-  // for (var i = 2; i < numero; i++) {
-  //   if (numero % i === 0) return false;
-  // }
-  // return true;
-  
 
 
 
-  if (numero > 1 && numero % 2 !== 0) return true;
-  if (numero % 2 === 0) return false;
-  return false; 
+  // if (numero === 1 || numero === 0) return false;
+  // if (numero % 2 !== 0) return true;
+  // if (numero % 2 === 0) return false;
+  // return false; 
  
 
 }
