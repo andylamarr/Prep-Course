@@ -26,6 +26,7 @@ function agregarPropiedad (objeto, property) { //DUDA con el braket notation.
 }
 
 function invocarMetodo (objeto, metodo) {//DUDA ¿Por que no fucniono solo <metodo ();>
+  //R: Por que hay que especificar que es de objeto y cómo no sabemos el nombre del método se utiliza [metodo].
   // "metodo" es una cadena que contiene el nombre de un método (funcion) en el objeto
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
@@ -60,7 +61,7 @@ function eliminarPropiedad (objeto, unaPropiedad) {
   // tip: tenes que usar bracket notation
   // Devuelve el objeto
   // Tu código:
-  delete objeto[unaPropiedad];
+  delete objeto[unaPropiedad]; //No sabemos cómo se llama la propiedad por lo que se utilizan los [];
   return objeto;
 
 }
@@ -86,7 +87,7 @@ function tieneEmail (usuario) {//DUDA ¿Cómo se verifica si hay un valor guarda
   // De lo contratio, devuelve "false"
   // Tu código:
 
-    if (usuario.email) {
+    if (usuario.email) { //Sabemos cómo se llama la propiedad (email) por lo que se usa dot notation.
       return true;
     }
   return false; 
@@ -94,7 +95,7 @@ function tieneEmail (usuario) {//DUDA ¿Cómo se verifica si hay un valor guarda
 }
 
 function tienePropiedad (objeto, propiedad) {
-  // Devuelve "true" si el objeto (parámetro "objeto") tiene una propiedad (key) cuyo nombre es igual al valor del argumento "propiedad"
+  // Devuelve "true" si el objeto (parámetro "objeto") tiene una propiedad cuyo nombre es igual al valor del argumento "propiedad"
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
@@ -110,7 +111,7 @@ function verificarPassword (usuario, password) {//DUDA No sé como diferenciar l
   // De lo contrario, devuelve "false"
   // Tu código:
 
-  return (usuario.password === password); 
+  return (password === usuario.password  ); 
 
   
   //También se puede resolver así:
@@ -129,7 +130,7 @@ function verificarPassword (usuario, password) {//DUDA No sé como diferenciar l
 function actualizarPassword (usuario, nuevaPassword) {//FALTA ESPECIFICAR CÓMO ESTA GUARDADA LA PASSWORD ANTIGUA!!
   //R: ESTA GUARDADA COMO: password
 
-  // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
+  // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevaPassword"
   // Devuelve el objeto
   // Tu código:
 
@@ -185,6 +186,7 @@ function sumarLikesDeUsuario (usuario) { // SOY UN CRACK!!
 
 function agregarMetodoCalculoDescuento (producto) { //DUDA No sé cómo agregar un método (funcion) nuevo a un objeto. 
   // R: Directo solo con el punto: producto.calcularPrecioDeDescuento = function () {}. OJO: El porcentaje de descuento ya lo tenemos NO lo vamos a recibir. 
+  
   // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
   // Este método debe multiplicar el "precio" del "producto" ("producto.precio" o "producto[precio]") y "porcentajeDeDescuento" para obtener el descuento
   // El método resta el descuento del precio y devuelve el precio con descuento
